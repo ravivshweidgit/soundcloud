@@ -71,7 +71,28 @@ command -v "$PYTHON_BIN" >/dev/null 2>&1 || {
 	exit 1
 }
 
+PY_VERSION="$("$PYTHON_BIN" -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')"
+if ! "$PYTHON_BIN" -m ensurepip --version >/dev/null 2>&1; then
+	if command -v apt >/dev/null 2>&1; then
+		PY_VENV_PKG="python${PY_VERSION}-venv"
+		INFO "Python '${PYTHON_BIN}' lacks ensurepip; installing ${PY_VENV_PKG} via apt."
+		sudo apt update
+		if ! sudo apt install -y "${PY_VENV_PKG}"; then
+			ERROR "Failed to install ${PY_VENV_PKG}. Install it manually and re-run setup."
+			exit 1
+		fi
+	else
+		ERROR "Python '${PYTHON_BIN}' lacks ensurepip. Install the corresponding venv package (e.g. python${PY_VERSION}-venv)."
+		exit 1
+	fi
+fi
+
 VENV_PATH="${PROJECT_ROOT}/.venv310"
+if [[ -d "$VENV_PATH" && ! -f "${VENV_PATH}/bin/activate" ]]; then
+	INFO "Existing virtual environment at ${VENV_PATH} appears corrupted; recreating."
+	rm -rf "$VENV_PATH"
+fi
+
 if [[ ! -d "$VENV_PATH" ]]; then
 	INFO "Creating virtual environment at ${VENV_PATH}"
 	"$PYTHON_BIN" -m venv "$VENV_PATH"
@@ -103,7 +124,7 @@ if ! command -v ffmpeg >/dev/null 2>&1; then
 			WARN "FFmpeg missing and apt unavailable. Install FFmpeg manually."
 		fi
 	else
-		WARN "FFmpeg not found. Install it or re-run with --install-ffmpeg."
+		WARN "FFmpeg not found. Install it manually via 'sudo apt install ffmpeg' or re-run with --install-ffmpeg."
 	fi
 fi
 
