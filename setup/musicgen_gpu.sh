@@ -29,11 +29,7 @@ echo "Pinning numpy 1.26.4 for Torch/Audiocraft compatibility..."
 python -m pip install --no-cache-dir --force-reinstall "numpy==1.26.4"
 
 echo "Installing CUDA-enabled torch/torchaudio 2.7.0 (CUDA 12.8)..."
-python -m pip install --no-cache-dir \
-	torch==2.7.0 \
-	torchvision==0.22.0 \
-	torchaudio==2.7.0 \
-	--index-url "${TORCH_INDEX_URL}"
+python -m pip install --no-cache-dir torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url "${TORCH_INDEX_URL}"
 
 echo "Re-pinning numpy 1.26.4 (Torch may bump it)..."
 python -m pip install --no-cache-dir --force-reinstall "numpy==1.26.4"
