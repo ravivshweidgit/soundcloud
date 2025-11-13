@@ -2,11 +2,19 @@
 set -euo pipefail
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VENV_PATH="${PROJECT_ROOT}/.venv_musicgen"
+VENV_PATH="${MUSICGEN_VENV_PATH:-${PROJECT_ROOT}/.venv_musicgen}"
+
+if [[ ! -d "$VENV_PATH" ]]; then
+	GPU_VENV="${PROJECT_ROOT}/.venv_musicgen_gpu"
+	if [[ "$VENV_PATH" == "${PROJECT_ROOT}/.venv_musicgen" && -d "$GPU_VENV" ]]; then
+		echo "Default MusicGen venv not found; falling back to GPU environment at ${GPU_VENV}."
+		VENV_PATH="$GPU_VENV"
+	fi
+fi
 
 if [[ ! -d "$VENV_PATH" ]]; then
 	echo "MusicGen venv not found at ${VENV_PATH}."
-	echo "Run setup/musicgen.sh first."
+	echo "Run setup/musicgen.sh or setup/musicgen_gpu.sh first (or set MUSICGEN_VENV_PATH)."
 	exit 1
 fi
 
@@ -91,7 +99,7 @@ fi
 TRACK_OUTPUT_DIR="${PROJECT_ROOT}/outputs/${TRACK_ID}"
 SEPARATED_DIR="${TRACK_OUTPUT_DIR}/separated"
 REFERENCE_PATH="${TRACK_OUTPUT_DIR}/melody_reference.wav"
-OUTPUT_DIR="${PROJECT_ROOT}/outputs/musicgen"
+OUTPUT_DIR="${TRACK_OUTPUT_DIR}/musicgen"
 OUTPUT_FILENAME="${TRACK_ID}_modern_instrumental.wav"
 OUTPUT_PATH="${OUTPUT_DIR}/${OUTPUT_FILENAME}"
 
@@ -127,6 +135,7 @@ source "${VENV_PATH}/bin/activate"
 
 export MUSICGEN_INPUT_DIR="$TRACK_OUTPUT_DIR"
 export MUSICGEN_REFERENCE="$(basename "$REFERENCE_PATH")"
+export MUSICGEN_OUTPUT_DIR="$OUTPUT_DIR"
 export MUSICGEN_OUTPUT="$OUTPUT_FILENAME"
 
 if [[ -n "$CUSTOM_PROMPT" ]]; then

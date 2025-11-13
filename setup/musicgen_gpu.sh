@@ -33,6 +33,9 @@ python -m pip install --no-cache-dir git+https://github.com/facebookresearch/aud
 echo "Pinning transformers 4.37.2 for Torch compatibility..."
 python -m pip install --no-cache-dir --force-reinstall "transformers==4.37.2"
 
+echo "Ensuring NumPy stays below 2.0 for CUDA wheels..."
+python -m pip install --no-cache-dir --force-reinstall "numpy==1.26.4"
+
 echo
 echo "GPU MusicGen environment ready. Activate with:"
 echo "  source ${PROJECT_ROOT}/${VENV_PATH}/bin/activate"
