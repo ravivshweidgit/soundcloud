@@ -34,8 +34,11 @@ python -m pip install --no-cache-dir torch==2.7.0 torchvision==0.22.0 torchaudio
 echo "Re-pinning numpy 1.26.4 (Torch may bump it)..."
 python -m pip install --no-cache-dir --force-reinstall "numpy==1.26.4"
 
+echo "Installing xFormers (CUDA 12.8 wheel)..."
+python -m pip install --no-cache-dir xformers==0.0.33 --extra-index-url "${TORCH_INDEX_URL}"
+
 echo "Installing audiocraft (MusicGen) from GitHub..."
-python -m pip install --no-cache-dir git+https://github.com/facebookresearch/audiocraft@v1.2.0
+python -m pip install --no-cache-dir git+https://github.com/facebookresearch/audiocraft@main
 
 echo "Pinning transformers 4.37.2 for Torch compatibility..."
 python -m pip install --no-cache-dir --force-reinstall "transformers==4.37.2"
