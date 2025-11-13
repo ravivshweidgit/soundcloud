@@ -6,7 +6,7 @@ cd "$PROJECT_ROOT"
 
 VENV_PATH=".venv_musicgen_gpu"
 PYTHON_BIN="${PYTHON_BIN:-python3.10}"
-TORCH_INDEX_URL="${TORCH_INDEX_URL:-https://download.pytorch.org/whl/cu121}"
+TORCH_INDEX_URL="${TORCH_INDEX_URL:-https://download.pytorch.org/whl/cu128}"
 
 if [[ ! -d "$VENV_PATH" ]]; then
 	echo "Creating GPU MusicGen virtual environment at ${PROJECT_ROOT}/${VENV_PATH} using ${PYTHON_BIN}..."
@@ -21,8 +21,12 @@ python -m pip install --upgrade pip setuptools wheel
 echo "Pinning numpy 1.26.4 for Torch/Audiocraft compatibility..."
 python -m pip install --no-cache-dir --force-reinstall "numpy==1.26.4"
 
-echo "Installing CUDA-enabled torch/torchaudio 2.2.2 (cu121)..."
-python -m pip install --no-cache-dir torch==2.2.2+cu121 torchaudio==2.2.2+cu121 --index-url "${TORCH_INDEX_URL}"
+echo "Installing CUDA-enabled torch/torchaudio 2.7.0 (CUDA 12.8)..."
+python -m pip install --no-cache-dir \
+	torch==2.7.0 \
+	torchvision==0.22.0 \
+	torchaudio==2.7.0 \
+	--index-url "${TORCH_INDEX_URL}"
 
 echo "Re-pinning numpy 1.26.4 (Torch may bump it)..."
 python -m pip install --no-cache-dir --force-reinstall "numpy==1.26.4"
