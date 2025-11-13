@@ -50,17 +50,24 @@ def run_demucs(input_path: Path, separated_root: Path) -> Path:
 		else:
 			existing.unlink()
 	model = "htdemucs"
+	device = os.environ.get("DEMUCS_DEVICE", "cuda").strip()
 	cmd = [
 		sys.executable,
 		"-m",
 		"demucs",
+	]
+	if device:
+		cmd.extend(["--device", device])
+	cmd.extend([
 		"-n",
 		model,
 		"-o",
 		str(separated_root),
 		str(input_path),
-	]
+	])
 	rprint(f"[cyan]Running Demucs separation with model '{model}'...[/cyan]")
+	if device:
+		rprint(f"[cyan]Using Demucs device: {device}[/cyan]")
 	# Prepare environment to avoid TorchCodec path on Windows and prefer local ffmpeg7 if present
 	env = os.environ.copy()
 	# Force torchaudio to avoid TorchCodec DLL usage and rely on soundfile backend

@@ -20,6 +20,7 @@ Examples:
 
 Environment variables:
   PYTHON_BIN  Override the Python 3.10 executable used to manage the venv (default: python3.10)
+  DEMUCS_DEVICE  Demucs device override (default: cpu; set to cuda to try GPU)
 EOF
 	exit 1
 }
@@ -98,6 +99,7 @@ fi
 source "${VENV_PATH}/bin/activate"
 
 export TORCHAUDIO_USE_TORCHCODEC=0
+export DEMUCS_DEVICE="${DEMUCS_DEVICE:-cpu}"
 
 echo "Running process_track.py --input \"$INPUT_FILE\" --output-dir \"$OUTPUT_DIR\" ${EXTRA_ARGS[*]}"
 python "${PROJECT_ROOT}/scripts/process_track.py" --input "$INPUT_FILE" --output-dir "$OUTPUT_DIR" "${EXTRA_ARGS[@]}"
