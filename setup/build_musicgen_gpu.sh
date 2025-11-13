@@ -4,6 +4,37 @@
 
 set -euo pipefail
 
+usage() {
+	cat <<'EOF'
+Usage: setup/build_musicgen_gpu.sh [options]
+
+Options:
+  --resume-build-pytorch   Skip directly to the "Build PyTorch wheel" step
+                           (previous steps are marked as skipped automatically).
+  -h, --help               Show this help message.
+EOF
+}
+
+RESUME_TARGET=""
+
+while [[ "${#}" -gt 0 ]]; do
+	case "$1" in
+		--resume-build-pytorch)
+			RESUME_TARGET="Build PyTorch wheel (this can take >1 hour)"
+			shift
+			;;
+		-h|--help)
+			usage
+			exit 0
+			;;
+		*)
+			echo "Unknown option: $1"
+			usage
+			exit 1
+			;;
+	esac
+done
+
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 LOG_DIR="${PROJECT_ROOT}/logs"
 TIMESTAMP="$(date +"%Y%m%d-%H%M%S")"
@@ -20,6 +51,23 @@ TORCH_TAG="${TORCH_TAG:-v2.2.2}"
 TORCHAUDIO_TAG="${TORCHAUDIO_TAG:-v2.2.2}"
 
 ARCH_LIST="${TORCH_CUDA_ARCH_LIST:-5.0;6.0;7.0;7.5;8.0;8.6;9.0;12.0}"
+
+resume_check() {
+	local title="$1"
+	if [[ -z "${RESUME_TARGET}" ]]; then
+		return 0
+	fi
+	if [[ "${RESUME_TARGET}" == "done" ]]; then
+		return 0
+	fi
+	if [[ "${title}" == "${RESUME_TARGET}" ]]; then
+		RESUME_TARGET="done"
+		return 0
+	fi
+	echo "Skipping (resume mode): ${title}"
+	echo
+	return 0
+}
 
 mkdir -p "${LOG_DIR}"
 mkdir -p "${SRC_ROOT}"
@@ -46,6 +94,9 @@ pause() {
 prompt_step() {
 	local title="$1"
 	shift
+	if ! resume_check "${title}"; then
+		return 1
+	fi
 	while true; do
 		read -rp "---- ${title} ---- [y=run / s=skip / q=quit]: " choice
 		case "${choice:-y}" in
@@ -58,7 +109,7 @@ prompt_step() {
 			s|S)
 				echo "Skipped: ${title}"
 				echo
-				return 1
+				return 0
 				;;
 			q|Q)
 				echo "Aborting at user request."
@@ -79,6 +130,9 @@ run_step() {
 
 info_step() {
 	local title="$1"
+	if ! resume_check "${title}"; then
+		return
+	fi
 	read -rp "---- ${title} ---- [Enter=continue / q=quit]: " choice
 	if [[ "${choice}" =~ ^[Qq]$ ]]; then
 		echo "Aborting at user request."
@@ -96,8 +150,8 @@ run_step "Install system dependencies (requires sudo)" \
 	sudo apt update
 
 run_step "Install build toolchain packages" \
-	sudo apt install -y build-essential ninja-build cmake libopenblas-dev libblas-dev \
-		libssl-dev libffi-dev python3-dev python3-pip python3-setuptools python3-wheel \
+sudo apt install -y build-essential ninja-build cmake libopenblas-dev libblas-dev \
+		libssl-dev libffi-dev python3-dev python3.10-dev python3-pip python3-setuptools python3-wheel \
 		curl git pkg-config
 
 if [[ ! -d "${BUILD_VENV}" ]]; then
@@ -127,7 +181,7 @@ run_step "Install PyTorch Python build dependencies" \
 	bash -c "cd '${PYTORCH_SRC}' && pip install -r requirements.txt"
 
 export TORCH_CUDA_ARCH_LIST="${ARCH_LIST}"
-export CMAKE_PREFIX_PATH="$(python -c 'from sysconfig import get_paths as gp; print(gp()[\"platlib\"])')"
+export CMAKE_PREFIX_PATH="$(python -c "from sysconfig import get_paths as gp; print(gp()['platlib'])")"
 
 run_step "Build PyTorch wheel (this can take >1 hour)" \
 	bash -c "cd '${PYTORCH_SRC}' && python setup.py bdist_wheel"
