@@ -47,8 +47,8 @@ SRC_ROOT="${PROJECT_ROOT}/build/src"
 PYTORCH_SRC="${SRC_ROOT}/pytorch"
 TORCHAUDIO_SRC="${SRC_ROOT}/torchaudio"
 
-TORCH_TAG="${TORCH_TAG:-v2.2.2}"
-TORCHAUDIO_TAG="${TORCHAUDIO_TAG:-v2.2.2}"
+TORCH_TAG="${TORCH_TAG:-v2.7.0}"
+TORCHAUDIO_TAG="${TORCHAUDIO_TAG:-v2.7.0}"
 
 ARCH_LIST="${TORCH_CUDA_ARCH_LIST:-5.0;6.0;7.0;7.5;8.0;8.6;9.0;12.0}"
 
@@ -289,6 +289,6 @@ run_step "Deactivate MusicGen virtualenv" \
 
 echo "============================================================"
 echo "Build steps completed. Review ${LOG_PATH} for the full log."
-echo "You can now rerun ./process/musicgen_cpu.sh poor_man_rose to test GPU support."
+echo "You can now rerun ./process/musicgen_gpu.sh poor_man_rose to test GPU support (or use ./process/musicgen_cpu.sh for CPU fallback)."
 echo "============================================================"
 
