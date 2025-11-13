@@ -8,5 +8,6 @@ Currently tracked:
 - `hungarian_LICENSE.txt`
 - `pdcurses_LICENSE.txt`
 - `pqp_LICENSE.txt`
+- `sigslot_LICENSE.txt`
 
 If another dependency triggers a “could not identify license file” error, add its canonical text here and copy it into the matching directory inside `build/src/pytorch/third_party/...` before rerunning the wheel build.
