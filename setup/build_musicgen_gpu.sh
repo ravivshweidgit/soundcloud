@@ -190,6 +190,45 @@ PYTORCH_WHEEL="$(ls "${PYTORCH_SRC}"/dist/torch-*.whl | tail -n1)"
 echo "PyTorch wheel built: ${PYTORCH_WHEEL}"
 echo
 
+run_step "Ensure CUDA toolkit (nvcc) is available" \
+	bash -c '
+set -euo pipefail
+check_nvcc() {
+	if command -v nvcc >/dev/null 2>&1; then
+		local ver
+		ver=$(nvcc --version | awk "/release/ {print \$6}" | tr -d ",")
+		if [[ "${ver}" == 12.8.* ]]; then
+			echo "nvcc ${ver} already available on PATH."
+			return 0
+		else
+			echo "[WARN] Found nvcc ${ver}, but CUDA 12.8+ is required for sm_120. Installing CUDA 12.8 toolchain."
+		fi
+	fi
+	return 1
+}
+
+if check_nvcc; then
+	exit 0
+fi
+
+if ! command -v apt >/dev/null 2>&1; then
+	echo "Automatic CUDA installation requires apt; install CUDA toolkit 12.8 manually and rerun." >&2
+	exit 1
+fi
+
+echo "Installing CUDA 12.8 toolkit (adds NVIDIA repo if missing)..."
+TMP_DEB=$(mktemp)
+curl -fsSL https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb -o "${TMP_DEB}"
+sudo dpkg -i "${TMP_DEB}"
+rm -f "${TMP_DEB}"
+sudo apt update
+if ! sudo apt install -y cuda-12-8; then
+	echo "[ERROR] Failed to install cuda-12-8. Please install CUDA 12.8 manually and rerun." >&2
+	exit 1
+fi
+echo "CUDA 12.8 installed successfully."
+'
+
 if [[ ! -d "${TORCHAUDIO_SRC}" ]]; then
 	run_step "Clone torchaudio repository" \
 		git clone https://github.com/pytorch/audio "${TORCHAUDIO_SRC}"
@@ -202,6 +241,11 @@ run_step "Checkout torchaudio tag ${TORCHAUDIO_TAG}" \
 
 run_step "Install torchaudio Python build dependencies" \
 	bash -c "cd '${TORCHAUDIO_SRC}' && pip install -r requirements.txt"
+
+export CUDAToolkit_ROOT="${CUDAToolkit_ROOT:-/usr/local/cuda-12.8}"
+if [[ -d "${CUDAToolkit_ROOT}/bin" ]]; then
+	export PATH="${CUDAToolkit_ROOT}/bin:${PATH}"
+fi
 
 run_step "Build torchaudio wheel (also lengthy)" \
 	bash -c "cd '${TORCHAUDIO_SRC}' && python setup.py bdist_wheel"
@@ -245,6 +289,6 @@ run_step "Deactivate MusicGen virtualenv" \
 
 echo "============================================================"
 echo "Build steps completed. Review ${LOG_PATH} for the full log."
-echo "You can now rerun ./process/musicgen.sh poor_man_rose to test GPU support."
+echo "You can now rerun ./process/musicgen_cpu.sh poor_man_rose to test GPU support."
 echo "============================================================"
 

@@ -2,20 +2,17 @@
 set -euo pipefail
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VENV_PATH="${MUSICGEN_VENV_PATH:-${PROJECT_ROOT}/.venv_musicgen}"
+VENV_PATH="${MUSICGEN_VENV_PATH:-${PROJECT_ROOT}/.venv_musicgen_gpu}"
 
 if [[ ! -d "$VENV_PATH" ]]; then
-	GPU_VENV="${PROJECT_ROOT}/.venv_musicgen_gpu"
-	if [[ "$VENV_PATH" == "${PROJECT_ROOT}/.venv_musicgen" && -d "$GPU_VENV" ]]; then
-		echo "Default MusicGen venv not found; falling back to GPU environment at ${GPU_VENV}."
-		VENV_PATH="$GPU_VENV"
+	CPU_VENV="${PROJECT_ROOT}/.venv_musicgen"
+	if [[ -d "$CPU_VENV" ]]; then
+		echo "[WARN] GPU venv not found; falling back to CPU environment at ${CPU_VENV}." >&2
+		VENV_PATH="$CPU_VENV"
+	else
+		echo "[ERROR] MusicGen GPU virtualenv not found. Run setup/musicgen_gpu.sh first (or set MUSICGEN_VENV_PATH)."
+		exit 1
 	fi
-fi
-
-if [[ ! -d "$VENV_PATH" ]]; then
-	echo "MusicGen venv not found at ${VENV_PATH}."
-	echo "Run setup/musicgen.sh or setup/musicgen_gpu.sh first (or set MUSICGEN_VENV_PATH)."
-	exit 1
 fi
 
 TRACK_ID=""
@@ -25,7 +22,7 @@ CUSTOM_DURATION=""
 
 usage() {
 	cat <<'EOF'
-Usage: process/musicgen.sh <track_id> [options]
+Usage: process/musicgen_gpu.sh <track_id> [options]
 
 Options:
   <track_id>              Name of the track (expects inputs/<track_id>.mp3 & outputs/<track_id>/separated/)
@@ -37,14 +34,15 @@ Options:
 Environment overrides passed through to MusicGen:
   MUSICGEN_INPUT_DIR      Defaults to outputs/<track_id>
   MUSICGEN_REFERENCE      Defaults to melody_reference.wav
-  MUSICGEN_OUTPUT         Defaults to <track_id>_modern_instrumental.wav (under outputs/musicgen)
+  MUSICGEN_OUTPUT         Defaults to <track_id>_modern_instrumental.wav (under outputs/<track_id>/musicgen)
   MUSICGEN_PROMPT         Defaults to script-defined modern pop prompt
   MUSICGEN_DURATION       Defaults to 30.0
+  MUSICGEN_DEVICE         Defaults to cuda
 
 Examples:
-  process/musicgen.sh poor_man_rose
-  process/musicgen.sh poor_man_rose --prompt "dark synthwave with heavy bass" --duration 45
-  process/musicgen.sh demo_track --skip-reference
+  process/musicgen_gpu.sh poor_man_rose
+  process/musicgen_gpu.sh poor_man_rose --prompt "dark synthwave with heavy bass" --duration 45
+  process/musicgen_gpu.sh demo_track --skip-reference
 EOF
 }
 
@@ -137,6 +135,7 @@ export MUSICGEN_INPUT_DIR="$TRACK_OUTPUT_DIR"
 export MUSICGEN_REFERENCE="$(basename "$REFERENCE_PATH")"
 export MUSICGEN_OUTPUT_DIR="$OUTPUT_DIR"
 export MUSICGEN_OUTPUT="$OUTPUT_FILENAME"
+export MUSICGEN_DEVICE="${MUSICGEN_DEVICE:-cuda}"
 
 if [[ -n "$CUSTOM_PROMPT" ]]; then
 	export MUSICGEN_PROMPT="$CUSTOM_PROMPT"
@@ -150,7 +149,7 @@ else
 	unset MUSICGEN_DURATION
 fi
 
-echo "Running MusicGen for track ${TRACK_ID}"
+echo "Running MusicGen (GPU) for track ${TRACK_ID}"
 python "${PROJECT_ROOT}/scripts/musicgen_modern.py"
 echo "Modern instrumental written to ${OUTPUT_PATH}"
 

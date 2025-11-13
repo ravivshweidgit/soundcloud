@@ -57,7 +57,7 @@ The script also installs `transformers==4.37.2`, which matches the Torch 2.2.2 w
 2. Create a reference mix from Demucs stems and render a modern instrumental:
 
 ```bash
-./process/musicgen.sh poor_man_rose
+./process/musicgen_cpu.sh poor_man_rose
 ```
 
 This saves `outputs/musicgen/poor_man_rose_modern_instrumental.wav`. The default prompt targets “modern pop electronic production ... shimmering synths”; override it with `--prompt "your description"` or adjust length via `--duration 45`.
