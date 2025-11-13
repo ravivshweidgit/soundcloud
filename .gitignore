@@ -27,6 +27,7 @@ share/python-wheels/
 .venv/
 .venv_musicgen/
 .venv_musicgen_gpu/
+.venv_musicgen_gpu_build/
 .venv310/
 env/
 venv/
