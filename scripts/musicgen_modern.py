@@ -14,6 +14,8 @@ Requirements:
 import os
 from pathlib import Path
 
+os.environ.setdefault("TORCHAUDIO_USE_TORCHCODEC", "0")
+
 import torch
 import torchaudio
 from audiocraft.data.audio import audio_write
