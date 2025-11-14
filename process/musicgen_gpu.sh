@@ -136,6 +136,8 @@ export MUSICGEN_REFERENCE="$(basename "$REFERENCE_PATH")"
 export MUSICGEN_OUTPUT_DIR="$OUTPUT_DIR"
 export MUSICGEN_OUTPUT="$OUTPUT_FILENAME"
 export MUSICGEN_DEVICE="${MUSICGEN_DEVICE:-cuda}"
+# Disable TorchCodec so torchaudio falls back to libsox backends
+export TORCHAUDIO_USE_TORCHCODEC=0
 
 if [[ -n "$CUSTOM_PROMPT" ]]; then
 	export MUSICGEN_PROMPT="$CUSTOM_PROMPT"
