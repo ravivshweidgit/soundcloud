@@ -33,6 +33,24 @@ source "${VENV_PATH}/bin/activate"
 echo "Upgrading pip/setuptools/wheel..."
 python -m pip install --upgrade pip setuptools wheel
 
+# Ensure FFmpeg development headers exist for Audiocraft
+if command -v apt >/dev/null 2>&1; then
+	echo "Installing FFmpeg development libraries (required for audiocraft build)..."
+	sudo apt update
+	sudo apt install -y \
+		ffmpeg \
+		pkg-config \
+		libavformat-dev \
+		libavcodec-dev \
+		libavdevice-dev \
+		libavutil-dev \
+		libavfilter-dev \
+		libswscale-dev \
+		libswresample-dev
+else
+	echo "[WARN] apt not available; ensure FFmpeg dev libraries are installed before building audiocraft."
+fi
+
 # --- Dependency Installation (RTX 5080 Optimized) ---
 
 # Pinning numpy is often required for specific PyTorch/Audiocraft compatibility
@@ -56,14 +74,24 @@ python -m pip install --no-cache-dir --force-reinstall "numpy==1.26.4"
 echo "Installing xFormers (CUDA 12.8 wheel)..."
 python -m pip install --no-cache-dir xformers==0.0.33 --extra-index-url "${TORCH_INDEX_URL}"
 
-# ==============================================================================================
-# 🌟 CRITICAL FIX: Install audiocraft with --no-deps to prevent PyTorch downgrade back to 2.1.0
-# ==============================================================================================
+# TorchCodec is required by torchaudio >= 2.9.0 for wav loading
+echo "Installing torchcodec..."
+python -m pip install --no-cache-dir torchcodec==0.3.0 --index-url "${TORCH_INDEX_URL}"
+
+# Install audiocraft with --no-deps to avoid pulling torch 2.1 wheels
 echo "Installing audiocraft (MusicGen) from GitHub, skipping dependency checks (--no-deps)..."
 python -m pip install --no-cache-dir --no-deps git+https://github.com/facebookresearch/audiocraft@main
 
 # Pinning transformers is a common practice to avoid issues with older HuggingFace models
 echo "Pinning transformers..."
 python -m pip install --no-cache-dir transformers==4.38.2
+
+echo "Final NumPy pin to guarantee < 2.0..."
+python -m pip install --no-cache-dir --force-reinstall "numpy==1.26.4"
+
+echo
+echo "Setup log saved to ${LOG_PATH}"
+echo "GPU MusicGen environment ready. Activate with:"
+echo "  source ${PROJECT_ROOT}/${VENV_PATH}/bin/activate"
 
 echo "Installation complete."
