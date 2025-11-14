@@ -16,6 +16,7 @@ from pathlib import Path
 
 os.environ.setdefault("TORCHAUDIO_USE_TORCHCODEC", "0")
 
+import soundfile as sf
 import torch
 import torchaudio
 from audiocraft.data.audio import audio_write
@@ -92,7 +93,10 @@ def load_reference(device: str, sample_rate: int) -> torch.Tensor:
 			"Generate it first (e.g., mix drums/bass/other stems into melody_reference.wav)."
 		)
 
-	melody, sr = torchaudio.load(REFERENCE_PATH)
+	data, sr = sf.read(REFERENCE_PATH)
+	if data.ndim == 1:
+		data = data[:, None]
+	melody = torch.from_numpy(data.T).float()
 	if sr != sample_rate:
 		melody = torchaudio.functional.resample(melody, sr, sample_rate)
 

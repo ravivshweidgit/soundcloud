@@ -78,6 +78,9 @@ python -m pip install --no-cache-dir xformers==0.0.33 --extra-index-url "${TORCH
 echo "Installing torchcodec..."
 python -m pip install --no-cache-dir torchcodec==0.3.0 --index-url "${TORCH_INDEX_URL}"
 
+echo "Installing soundfile for reference loading..."
+python -m pip install --no-cache-dir soundfile
+
 # Install audiocraft with --no-deps to avoid pulling torch 2.1 wheels
 echo "Installing audiocraft (MusicGen) from GitHub, skipping dependency checks (--no-deps)..."
 python -m pip install --no-cache-dir --no-deps git+https://github.com/facebookresearch/audiocraft@main
