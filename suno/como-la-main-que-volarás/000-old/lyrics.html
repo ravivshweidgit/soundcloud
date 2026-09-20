@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Como la main que volarás — lyrics</title>
+  <style>
+    :root {
+      --green: #1f9d55;
+      --red: #d64545;
+      --muted: #6b7280;
+      --bg: #111318;
+      --card: #1a1d24;
+      --text: #f3f4f6;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0 0 0.35rem;
+    }
+
+    .legend {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      margin: 0 0 2rem;
+      color: var(--muted);
+    }
+
+    .legend span::before {
+      content: "";
+      display: inline-block;
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      margin-right: 0.4rem;
+      vertical-align: -0.05rem;
+    }
+
+    .legend .ok::before { background: var(--green); }
+    .legend .bad::before { background: var(--red); }
+
+    .block {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.25rem 1.4rem;
+      margin: 0 0 1rem;
+    }
+
+    .label {
+      font-family: system-ui, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.7rem;
+    }
+
+    p {
+      margin: 0.15rem 0;
+      font-size: 1.15rem;
+    }
+
+    .es { color: var(--green); }
+    .no { color: var(--red); }
+
+    .why {
+      display: block;
+      font-family: system-ui, sans-serif;
+      font-size: 0.72rem;
+      color: #9ca3af;
+      font-style: italic;
+      margin: 0 0 0.45rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="no" title="«main» no es español; sería «mano».">Como la main que volarás</h1>
+    <div class="legend">
+      <span class="ok">Español correcto</span>
+      <span class="bad">No es español correcto</span>
+    </div>
+
+    <section class="block">
+      <div class="label">Verse 1</div>
+      <p class="es">Dejaste sombra frente a lo que quiere</p>
+      <span class="why">Frase poética, pero gramaticalmente española.</span>
+      <p class="no">Si es que tan ana pura agua</p>
+      <span class="why">«tan ana» no encaja; la frase no forma una oración válida.</span>
+      <p class="no">Rio es hoy carnal que no me estas</p>
+      <span class="why">Sintaxis rota; faltan acentos (Río, estás) y el nexo no cuadra.</span>
+      <p class="no">Si estas hoy cololindial</p>
+      <span class="why">«cololindial» no es una palabra española.</span>
+    </section>
+
+    <section class="block">
+      <div class="label">Chorus</div>
+      <p class="no">Como la main que volarás</p>
+      <span class="why">«main» es inglés/francés; en español sería «mano».</span>
+      <p class="es">Tu te volarás si te esperas</p>
+      <span class="why">Español válido (falta el acento en «Tú»).</span>
+      <p class="no">No necesitas lascias</p>
+      <span class="why">«lascias» no existe en español.</span>
+      <p class="es">No necesitas mas</p>
+      <span class="why">Español válido (sería «más» con acento).</span>
+    </section>
+
+    <section class="block">
+      <div class="label">Verse 2</div>
+      <p class="no">Tarde o una madrugantes</p>
+      <span class="why">Desacuerdo de número/género: «una» + «madrugantes».</span>
+      <p class="no">Picada manda la tuya hoy</p>
+      <span class="why">Palabras españolas, pero no forman una oración correcta.</span>
+      <p class="no">Tan vida de hoy te acomodaras</p>
+      <span class="why">«Tan vida de hoy» no es una construcción española.</span>
+      <p class="no">Si estas hoy cololindial</p>
+      <span class="why">«cololindial» no es una palabra española.</span>
+    </section>
+
+    <section class="block">
+      <div class="label">Verse 3</div>
+      <p class="no">Por su alguno ma tú aguantes</p>
+      <span class="why">Mezcla rota; «ma» no encaja (¿«más» / «por si alguno»?).</span>
+      <p class="no">Ta no no no mi cuida vos</p>
+      <span class="why">«Ta» y «mi cuida» no son español correcto (sería «me cuida» / «cuidame»).</span>
+      <p class="no">Rio es hoy no me estas</p>
+      <span class="why">Oración incompleta y sin concordancia.</span>
+      <p class="no">Si estas hoy cololindial</p>
+      <span class="why">«cololindial» no es una palabra española.</span>
+    </section>
+
+    <section class="block">
+      <div class="label">Chorus</div>
+      <p class="no">Como la main que volarás</p>
+      <p class="es">Tu te volarás si te esperas</p>
+      <p class="no">No necesitas lascias</p>
+      <p class="es">No necesitas mas</p>
+    </section>
+
+    <section class="block">
+      <div class="label">Chorus</div>
+      <p class="no">Como la main que volarás</p>
+      <p class="es">Tu te volarás si te esperas</p>
+      <p class="no">No necesitas lascias</p>
+      <p class="es">No necesitas mas</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -22,9 +22,64 @@ Important:
   4. Visit the public track page and use “Download file”.
 - Alternative: export your song from your DAW to WAV/AIFF/FLAC and use that local file.
 
-## Quickstart (WSL2 / Linux / Windows via WSL)
+## Quickstart (Windows)
 
-The project runs cleanly under WSL2 or any Linux environment with Python 3.10. On Windows, open a WSL shell first, then:
+### One-time setup via script (recommended)
+
+```powershell
+# From the project root
+powershell -ExecutionPolicy Bypass -File .\setup\setup.ps1
+# Optional flags:
+#   -InstallPython   Attempt Python install via winget if missing
+#   -InstallFFmpeg   Attempt FFmpeg install via winget if missing
+#   -WarmupDemucs    Trigger model download (can take a while)
+```
+
+Prerequisites:
+- Python 3.10 (needed for the pinned `torch==2.2.2` / `torchaudio==2.2.2` wheels)
+- FFmpeg installed and on PATH (check in PowerShell: `ffmpeg -version`)
+
+Setup:
+1) Create and activate a dedicated 3.10 virtual environment:
+
+```powershell
+py -3.10 -m venv .venv310
+.\.venv310\Scripts\Activate.ps1
+```
+
+2) Install dependencies:
+
+```powershell
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install --no-cache-dir -r requirements.txt
+```
+
+3) Add the bundled FFmpeg (optional but recommended if you use `tools\ffmpeg7`):
+
+```powershell
+$env:PATH="C:\projects\SoundCloud\tools\ffmpeg7\bin;" + $env:PATH
+```
+
+> Tip: drop your source files into `inputs\<track_id>.mp3` to use the helper scripts with their defaults.
+
+4) Run the processor (example: keep melodies, replace vocals):
+
+```powershell
+python scripts\process_track.py `
+  --input "C:\path\to\your_track.wav" `
+  --output-dir ".\outputs" `
+  --replace-vocals "C:\path\to\new_vocals.wav"
+```
+
+5) Result:
+- Separated stems will be placed under `.\\outputs\\<track_name>\\separated\\...`
+- Final versions will be in `.\\outputs\\<track_name>\\final\\...`
+
+Tip: `process\run.ps1` automates the steps above for Windows users.
+
+## Quickstart (WSL2 / Linux)
+
+The project also runs cleanly under WSL2 with Python 3.10. From your WSL shell:
 
 ```bash
 cd /mnt/c/projects/SoundCloud
@@ -57,9 +112,7 @@ The script also installs `transformers==4.37.2`, which matches the Torch 2.2.2 w
 2. Create a reference mix from Demucs stems and render a modern instrumental:
 
 ```bash
-./process/musicgen_cpu.sh poor_man_rose    # GPU build still pending
-# or, once the CUDA build succeeds:
-./process/musicgen_gpu.sh poor_man_rose
+./process/musicgen.sh poor_man_rose
 ```
 
 This saves `outputs/musicgen/poor_man_rose_modern_instrumental.wav`. The default prompt targets “modern pop electronic production ... shimmering synths”; override it with `--prompt "your description"` or adjust length via `--duration 45`.
