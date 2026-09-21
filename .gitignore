@@ -63,6 +63,9 @@ Desktop.ini
 # Project outputs
 outputs/
 
+# Rendered video stays local — single files exceed GitHub's 100 MB limit
+*.mp4
+
 # Tooling binaries
 tools/ffmpeg7/
 
