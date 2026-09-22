@@ -66,6 +66,11 @@ outputs/
 # Rendered video stays local — single files exceed GitHub's 100 MB limit
 *.mp4
 
+# ffmpeg frame dumps and scratch lists from video analysis
+mp4/**/_*/
+suno/**/assets/eyes/_*/
+mp4/**/*-concat.txt
+
 # Tooling binaries
 tools/ffmpeg7/
 

@@ -1,0 +1,34 @@
+---
+description: Surgical fixes inside a finished music video with ffmpeg - replacing bad shots, cropping white side-bar artifacts, cut timing. Use when editing, splicing, or repairing any mp4 in mp4/.
+alwaysApply: false
+---
+
+# Video surgery (ffmpeg)
+
+## Audio is never cut
+- Edit the video stream only. The finished file always carries the **full original audio** as one continuous track.
+- Single pass: `-filter_complex "...concat=n=N:v=1:a=0[v]" -map "[v]" -map 0:a`.
+- Two-step: build video with `-an`, then `-i video.mp4 -i original.mp4 -map 0:v -map 1:a -c:v copy -shortest`.
+
+## Rebuild from the untouched original
+- Keep the pre-fix file. Put every fix window into **one** `filter_complex` and render from the original, instead of cropping an already-fixed file again.
+- Write to a new name (`-fixed.mp4`). The user renames when approved.
+
+## Find boundaries by measurement, not by eye
+- Scene cuts: `ffmpeg -ss S -t D -i in.mp4 -vf "select='gt(scene,0.12)',showinfo" -f null -` and add `S` back to `pts_time`.
+- Then extract frames every 0.05–0.25 s around each cut and score them (PIL/numpy) to find the first and last bad frame.
+
+## Cut timing (user-approved)
+- Artifact starts mid-shot: start **0.2 s before** the first bad frame.
+- Artifact starts on a scene cut: start **exactly on the cut**.
+- End at the next scene cut, **within one frame** (1/fps). Going further crops the next shot and the picture visibly "squeezes". Render, let the user watch, and nudge by exactly one frame.
+
+## White side bars vs. artistic white frame
+- **Artifact:** only the left/right edge columns are bright; top and bottom rows are normal. Fix with it.
+- **Artistic frame:** top, bottom and sides are all white. It is intentional. Never crop it.
+- Measure the bar width per column, crop just past it, and scale back: `crop=iw-2*W:ih:W:0,scale=1280:720:flags=lanczos,setsar=1`.
+
+## Replacing bad shots (e.g. eye close-ups)
+- Replace only the bad windows and keep every good shot around them.
+- Use short inserts from the best take. Avoid long ping-pong loops, which feel static.
+- Match the medium and light: live inserts into live sections, painted into painted.

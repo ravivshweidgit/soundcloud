@@ -1,0 +1,33 @@
+---
+description: 720p to 1440p upscale mastering (FreeBeat Topaz) and DistroKid DistroVid delivery - split, upscale, join with original audio, H.264 export, upload. Use when upscaling or preparing a video for DistroKid.
+alwaysApply: false
+---
+
+# Upscale mastering and delivery
+
+## Upscale (FreeBeat)
+- Model **Topaz**, not Flux 3 (Flux can invent detail and drift faces). Factor **2** (720p to 1440p). Target fps **equal to source fps** (check with ffprobe; usually 30).
+- FreeBeat's 100 MB limit is **decimal** (bytes / 1,000,000). Windows shows MiB, so a "96 MB" file can be rejected.
+- Full ~3 min songs fail in Topaz even under 100 MB. Split into two halves with stream copy (no re-encode):
+  `ffmpeg -i in.mp4 -t MID -c copy part1.mp4` and `ffmpeg -ss MID -i in.mp4 -c copy part2.mp4`.
+- OpenArt's upscaler caps clips at 60 s, so it needs 3–4 parts.
+- Parts live in `mp4/<song>/` as `<song>-part1.mp4`, returned as `<song>-part1-1440p.mp4`.
+
+## Join: video parts plus original full audio
+- Never concat with audio. Splicing two audio tracks makes an audible seam at the join.
+- Run from the parts folder, with relative names in the list file (absolute Windows paths broke concat):
+  ```
+  ffmpeg -f concat -safe 0 -i list.txt -an -c:v copy video.mp4
+  ffmpeg -i video.mp4 -i <song>.mp4 -map 0:v -map 1:a -c:v copy -c:a aac -b:a 320k -shortest -movflags +faststart <song>-1440p.mp4
+  ```
+
+## Export for DistroVid
+- Topaz returns **HEVC**. DistroVid rejects HEVC during processing. Re-encode to H.264 and copy the audio:
+  `ffmpeg -i <song>-1440p.mp4 -c:v libx264 -preset slow -crf 17 -profile:v high -level 5.1 -pix_fmt yuv420p -c:a copy -movflags +faststart <song>-1440p-h264.mp4`
+
+## DistroVid upload
+- A video file cannot be replaced. Delete the entry and re-upload, ideally soon after release, before stats build up.
+- Title is the song name only: no "HD" or "4K".
+- Description: no `< > % & ; ~`. Write it from the song's lyrics files and credit public-domain sources (e.g. Kalevala).
+- After uploading, re-check that the thumbnail preview shows the chosen frame. It can fall back to a different frame.
+- "Sent to streaming services" means the file passed processing.

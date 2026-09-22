@@ -103,7 +103,7 @@ is the same sequence in live action. Everything else is live action.
 |---|---|---|
 | Blossom | Full bloom painted; rain on the still; video = petals + light only | Real wild cherry in a real sunshower; rain read as lit rings on a puddle |
 | River | Drawn water, gold-leaf stars on it | Cold dark water, night-blue |
-| Stones | Graphic, weightless | Cold and real under her bare feet |
+| Stones | Graphic, weightless, untouched | One pressed under her bare foot, then taken by his hand |
 | Footprints | **None** — nobody has walked in a dream | **Boot prints, there already, and not hers** |
 | Stars | Gold leaf, decorative, dreamt | Withheld to the outro |
 
@@ -211,7 +211,7 @@ so the animation is motivated by the lyric that precedes it. Winter day in live 
 passage through the door on "Or", then the drawn sunshower and the drawn river. No footprints.
 
 Second time through = **real, live action.** The same beats with a camera instead of a brush.
-Blossom in actual rain. Bare feet on cold pebbles. Footprints that are **not hers**, already in the mud.
+Blossom in actual rain. Bare feet on cold pebbles, and a hand that is not hers taking the stone she stepped on. Footprints that are **not hers**, already in the mud.
 Stars leave the dream and wait for the outro.
 
 Same framings both times, same order. The medium and the evidence are what change.
@@ -231,7 +231,7 @@ Same framings both times, same order. The medium and the evidence are what chang
 | Verse 1 return | **Drawn → Live** | same words as Verse 1 | Hard cut out of the last drawn petals into live wet air over the lane, then Verse 1's exact frames, **warmer**. Morning in the eyes for real. |
 | Chorus 3 | Live | like this morning sun with you | **Sun disk allowed.** She comes around the gable into the lane. Camera travels. First chorus that moves with her. |
 | Bridge 2 — wait | Live | same lines as bridge 1 wait | The real versions: cold rain on bare ground again, then **a real wild cherry in a real sunshower**, held, not flashed. Then the pull back to chorus 1's wide valley with **every cherry in flower**. No stars yet. |
-| Bridge 2 — walk | Live | same lines as bridge 1 walk | Opens on the **same wide valley in blossom under a full moon**, then descends to the river. **She steps barefoot onto the pebbles.** **Boot prints already there, not hers.** She finds them. |
+| Bridge 2 — walk | Live | same lines as bridge 1 walk | Opens on the **same wide valley in blossom under a full moon**, then descends to the river. **She steps barefoot onto the pebbles**, pressing one distinct stone into the grit; **an unknown man's hand lifts that same stone** and is gone. Then **boot prints already there, not hers.** She finds them. |
 | Outro | Live **+ Drawn** | oh / then all the stars can shine bright in your dreams | Back to her eyes. The stars in them are **drawn** — gold leaf on a photographic iris. The only frame where both mediums share the screen. Hold to the end. |
 
 ## The arrangement is the edit plan
@@ -283,7 +283,8 @@ Same logic as the rainbow and the lupine.
 2. **The passage through the door** — the camera does not go through until bridge 1. Chorus 2 may approach it and stop.
 3. **The sun disk** — in her eyes first, in the sky only in chorus 3.
 4. **Real blossom** — bridge 2 only. Every live cherry is bare until then. The drawn blossom comes first, the photographed one second, so the real trees answer the dream instead of previewing it. The whole valley in flower is held back to the very end of bridge 2.
-5. **Footprints** — none in bridge 1 (a dream has no evidence). Bridge 2 only. The second person arrives as a trace, not a body. **They are boot prints and she is barefoot**, so "not hers" reads on screen instead of only in the brief.
+5. **Footprints** — none in bridge 1 (a dream has no evidence). Bridge 2 only. **They are boot prints and she is barefoot**, so "not hers" reads on screen instead of only in the brief.
+6. **The hand** — the second person is withheld all film and then arrives as **one hand only**, in bridge 2, to lift the single pebble she has just stepped on. No face, no body, no reflection, one appearance. She touches the stone; he takes the thing she touched; they never meet. In the painted dream nobody picks anything up at all — that absence is what makes the hand land.
 6. **Her walking** — verses she is still. Choruses 1–2 only the *world* moves. **She** walks in chorus 3, around the gable, and on the real river.
 7. **The two mediums in one frame** — never, until the last shot. Drawn stars in a live eye is the final image and nothing before it may share a frame.
 

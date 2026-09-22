@@ -19,7 +19,7 @@ Create one production-ready three-view character turnaround reference sheet for 
 
 INPUT ROLE
 No identity image is attached. Use the identity description below as the sole physical identity source.
-[identity - preserve exactly]: Female figure in her late twenties to early thirties, medium height, soft build. Gentle open face, soft features, warm freckled skin with a light natural flush on the cheeks — kind and calm, not weathered or harsh. Bare face with no makeup. Clear soft green or grey-green eyes. Natural red hair, copper to auburn, worn loose or softly pulled back with loose strands at the temples.
+[identity - preserve exactly]: Female figure in her late twenties to early thirties, medium height, soft build. Gentle open face, soft features, fair warm skin with a light natural flush on the cheeks — kind and calm, not weathered or harsh. A few sparse light freckles across the bridge of the nose only — never a dense constellation, never covering the forehead or cheeks. Bare face with no makeup. Clear soft green or grey-green eyes. Natural red hair, copper to auburn, worn loose or softly pulled back with loose strands at the temples.
 
 SOURCE WARDROBE BOUNDARY
 There is no source-image wardrobe authority. Physical identity text is not wardrobe direction. The CREATIVE LOOK below is the only source of truth for clothing, footwear, accessories, grooming, materials, colours, layers and silhouette.
@@ -53,13 +53,13 @@ Create one cinematic close portrait of the same woman as @image1, wide 16:9.
 
 Tight close-up on her face — the frame holds her eyes, brows and the bridge of her nose, cropping the top of the head and the chin. She looks **straight down the lens**, level, direct, calm, unsmiling. Not pleading, not sad, not performing. A person who has been waiting a long time and is simply looking.
 
-Real skin at close range: visible pores and fine texture, light freckling, a soft natural flush on the cheek, a few loose copper hairs across the temple. Clear soft green to grey-green irises with real detail in the iris fibre. No makeup, no retouching, no smoothing.
+Real skin at close range: visible pores and fine texture, a few sparse light freckles on the bridge of the nose only — never a dense constellation across the forehead or cheeks — a soft natural flush on the cheek, a few loose copper hairs across the temple. Clear soft green to grey-green irises with real detail in the iris fibre. No makeup, no retouching, no smoothing.
 
 LIGHT — this is the whole point of the shot. Cold blue-grey light before sunrise, low contrast, no direct sun on the skin. **One single small warm catchlight** sits in each eye — a low point of gold, the only warm thing in the entire frame, as if the sun were somewhere she can see and we cannot. Everything else stays cool.
 
 Filmic live-action photography, shallow but not soft focus, eyes critically sharp, natural light, organic 35mm film grain, matte.
 
-Do not include: soft-focus beauty portrait, smoothed or airbrushed skin, makeup, styled hair, tears, averted eyes, head tilt, coy expression, warm overall grade, golden hour on the face, multiple scattered catchlights, ring-light reflection, second person, hands, text, watermark.
+Do not include: soft-focus beauty portrait, smoothed or airbrushed skin, makeup, styled hair, tears, averted eyes, head tilt, coy expression, warm overall grade, golden hour on the face, multiple scattered catchlights, ring-light reflection, a flat dead black pupil with no reflection in it, an extreme single-eye iris macro, contact-lens or medical-textbook iris look, dense freckle constellations covering forehead or cheeks, second person, hands, text, watermark.
 
 ---
 
@@ -74,6 +74,13 @@ second Character is what breaks the one-person rule, so it stays out.
 Identical framing every time — only the light changes across the film. Render them in one sitting so
 they match.
 
+**Two failures to watch for in every eye pass.** First, the **pupil must never be a flat black disc** —
+a real pupil carries a reflection of the light on the face, and in this film it carries the one small
+warm catchlight. An empty black pupil reads instantly as synthetic and it deletes the film's central
+device. Second, **never let it become a single-eye iris macro.** The locked framing holds both eyes,
+the brows and the bridge of the nose, looking down the lens; one eye filling the frame cannot carry a
+gaze and looks like medical stock footage.
+
 **A Character now exists in OpenArt for the face as well as the full figure.** That is fine and it
 belongs here — but attach it **only** to these three passes. It must stay out of the Director run:
 two Characters of the same woman is the most likely way to make Director cast two people and break
@@ -87,6 +94,18 @@ stitched in the edit**. Cut on the blinks — a cut from eye to identical eye is
 mid-blink, and it is the one place in this film where an invisible cut is wanted. Render two or three
 takes of each pass so you have blinks to choose from.
 
+**On FreeBeat.** It will do these, but only through its **Image to Video** tool, where you upload an
+image to set the **first frame**. Its headline "song → music video" agent is the wrong door entirely:
+that regenerates a whole video from the track, which is the film we already have. Of its models,
+**Luma Ray 2** suits a locked cinematic hold best — 10 s max, up to 1080p. **Vidu 2.0** is faster but
+gives shorter clips. Either way the first frame is `women-face.png`, so her face cannot drift.
+
+**Clip maths, FreeBeat.** At Sora 2 Pro's **12 s** ceiling: section 1 needs 3 clips, section 6 needs 2,
+section 9 needs 3. At MiniMax H3-Max's **15 s** ceiling it drops to **six clips total** — section 9
+takes exactly 2, section 6 takes 1 trimmed to 13 s, section 1 takes 3 (15 + 15 + 3). Prefer H3-Max:
+the delivered film was rendered on MiniMax H3 Max 768P, so its grain and skin response match at the
+cut points, which is what makes the joins invisible. Trim each cut to land on a blink.
+
 **A · section 1 — coldest · 33 s to fill**
 
 ```
@@ -96,7 +115,7 @@ Light: cold blue-grey before sunrise, flat and shadowless, no direct sun on the 
 
 Filmic live-action, eyes critically sharp, real pores and fine skin texture, organic 35mm grain, matte.
 
-Do not: reframe or pull out, turn or tilt the head, add a smile, add tears or wet eyes, warm the overall grade, add golden light on the skin, add extra catchlights or a ring-light reflection, morph the face, change her age, smooth or retouch the skin, add hands, text, watermark.
+Do not: reframe or pull out, turn or tilt the head, add a smile, add tears or wet eyes, warm the overall grade, add golden light on the skin, add extra catchlights or a ring-light reflection, morph the face, change her age, smooth or retouch the skin, dense freckle constellations covering forehead or cheeks, add hands, text, watermark.
 ```
 
 **B · section 6 — the same eyes, the light has moved · 13 s to fill**
@@ -358,7 +377,7 @@ Paste:
 ```
 Full music video for the song "New Hope". Visual only — the song is already recorded. NO singer, NO performer on camera miming, NO lip sync, NO lyric captions, NO on-screen text, NO voiceover, NO added music or sound effects. Use the attached audio as the whole soundtrack.
 
-ONE PERSON IN THE ENTIRE FILM: @woman. No second person anywhere, including background, reflections and silhouettes. No instruments, no musicians. Her hands are always empty. She wears scuffed brown leather ankle boots everywhere EXCEPT the midnight river in section 8, where she is barefoot — that is the only exception and it matters.
+ONE PERSON ON CAMERA IN THE ENTIRE FILM: @woman. No second person anywhere — no face, no figure, no silhouette, no reflection — with ONE narrow exception: in section 8 a man's HAND alone enters the frame for a single action, described there. Never more of him than the hand and wrist, never anywhere else in the film. No instruments, no musicians. Her own hands are always empty. She wears scuffed brown leather ankle boots everywhere EXCEPT the midnight river in section 8, where she is barefoot — that is the only wardrobe exception and it matters.
 
 THE LOCATIONS, so the tags are unambiguous. All of them are the SAME small Irish glen seen differently: a grey stone cottage at the top of a slope with one large wild cherry hard beside its gable, a stone lane running down from its door to a five-bar field gate, a pebble river below the lane, eight scattered wild cherries through the valley, drystone walls, a long ridge closing the horizon.
 - @door — the cottage gable and its shut timber door, straight on. Interior never visible.
@@ -422,7 +441,7 @@ First bridge. Starts live and grey, goes through the door, and comes out hand-pa
 "Then all the stars can shine bright in your dreams" — stay painted. Drawn sky, or gold light lying on the painted water. Petals and painted light may move; do not add rain particles on top of the painting.
 — second movement, still painted —
 "yeah... yeah I'm going down the river flow" — @drawn-river, painted water in visible brush strokes.
-"Collecting pebbles and the stones" — the painted stones on the river bed, graphic and deliberate. NOT in a hand. Nobody picks anything up.
+"Collecting pebbles and the stones" — the painted stones on the river bed, graphic and deliberate. NOT in a hand. NOBODY PICKS ANYTHING UP, and no hand enters this frame — that belongs to section 8 and is exactly what makes it land. The dream has stones; only the real world has someone to take one.
 "Your footprints touched behind a midnight walk" — the painted mud bank, and it is COMPLETELY EMPTY. No footprints of any kind. The dream does not have them yet. Hold on the empty bank.
 Do not: put any figure in this section, cross-dissolve between the mediums, add photographic rain particles on top of the painting.
 
@@ -444,7 +463,11 @@ Second bridge. Identical words to section 5, and it must look like the real worl
 "Then all the stars can shine bright in your dreams" — pull back off the single tree to the WIDEST live frame in the film, @glen-bloom: the same whole valley from Chorus 1, from the same viewpoint, and every one of those bare cherries is now in full white blossom. The real world has kept the promise the dream made. Slow, one move, hold it. NO stars yet — they belong to the outro. Keep it restrained: muted colour, sun disk off frame, still less radiant than the painted bridge.
 — second movement, live, midnight —
 "yeah... yeah I'm going down the river flow" — open on the WIDEST night frame, @glen-midnight: the same whole valley from @glen-bloom, same trees still in white blossom, now under a FULL MOON. Silver moonlight on the flowers, a moon-path on the river below. Then descend into @river-midnight — the same river low and close, blossom glowing over black banks, moon-path running on the water.
-"Collecting pebbles and the stones" — @river-midnight. SHE STEPS BAREFOOT into the shallow edge of the river, onto the pale pebbles. Low and close on her bare feet and the moonlit water, the pebbles clear under the surface, water breaking around her ankles. Wide enough to read as a person, not a macro detail. NO hands and NO fingers in frame — nobody picks anything up.
+"Collecting pebbles and the stones" — @river-midnight, and this is the true centre of the film. Three beats, in this order.
+BEAT 1 — SHE STEPS BAREFOOT into the shallow edge of the river, onto the pale pebbles. Low and close on her bare feet and the moonlit water, the pebbles clear under the surface, water breaking around her ankles. Wide enough to read as a person, not a macro detail. Her own hands stay out of frame.
+BEAT 2 — ONE PEBBLE. Her bare foot comes down on a single distinct pale rounded pebble, larger and lighter than the rest, and presses it into the wet grit. She lifts her foot and moves on. Hold on that one pebble alone, sitting in the print her foot left, water running past it. It must be unmistakably ONE identifiable stone — the audience has to be able to recognise it again.
+BEAT 3 — A MAN'S HAND, and nothing else of him. It enters low from the edge of frame, reaches down, closes on THAT SAME pebble and lifts it out of frame. We see the hand and at most the wrist and a dark sleeve cuff. NO face, NO head, NO shoulder, NO arm above the forearm, NO body, NO figure at the edge of frame, NO reflection of him in the water, NO shadow that reveals a person. A working man's hand — larger and rougher than hers, plain, no ring, no watch, no jewellery. Keep it dark in the moonlight, the fingers relaxed and closing together, never splayed or spread wide, never in macro; frame it wide enough that the wet stones are the subject and the hand is simply what arrives. It enters, takes, and is gone — short. He appears exactly once in the whole film, here, for this one action, and we never learn who he is.
+The point of the three beats: she touches the stone, and the person she has been waiting for takes the very thing she touched. They never meet and never share a frame beyond that hand.
 "Your footprints touched behind a midnight walk" — the payoff of the whole film: on @river-midnight's mud bank, BOOT PRINTS are already pressed into the mud. She is barefoot, so the prints are unmistakably NOT hers. She finds them and looks at them. She does not make them, and we never see who did. Hold.
 
 === 9. OUTRO · live · back to the eyes · the only dual-medium frame ===
@@ -459,7 +482,7 @@ RAIN IS FILMED ON THE WATER. Wherever it rains in live action, put standing wate
 The painted world must stay more beautiful and more saturated than the best live frame. Real morning is true; only the dream is radiant.
 
 DO NOT INCLUDE, anywhere
-A singer or performer, lip sync, captions, subtitles, lyrics on screen, logos, watermark, a second person, anyone besides @woman, any drawn or animated version of her, instruments, musicians, heavy rain streaks across open air or sky, rain in any section other than 5 and 8, cross-dissolves between the two mediums, the sun disk before section 7, blossom on any live-action tree before section 8 — every cherry in sections 1 to 7 is bare, footprints in the painted section, anime or manga styling, Japanese sakura, sakura festival, torii, lanterns, kimono, Ghibli pastiche, cel shading, hard black outlines, 3D render, CGI, anything held in her hands, close-ups of hands or fingers, costume-drama styling, Celtic novelty jewellery, green novelty Irish clothing, modern objects, roads, vehicles, poles, wires, signage.
+A singer or performer, lip sync, an open or parted mouth on her in any shot, a gasp or theatrical surprise, a flat dead black pupil with no catchlight in it, an extreme single-eye iris macro, captions, subtitles, lyrics on screen, logos, watermark, any second person on camera other than the single disembodied hand in section 8, any face or body or silhouette or reflection belonging to that man, any drawn or animated version of her, instruments, musicians, heavy rain streaks across open air or sky, rain in any section other than 5 and 8, cross-dissolves between the two mediums, the sun disk before section 7, blossom on any live-action tree before section 8 — every cherry in sections 1 to 7 is bare, footprints in the painted section, a hand in the painted section, anime or manga styling, Japanese sakura, sakura festival, torii, lanterns, kimono, Ghibli pastiche, cel shading, hard black outlines, 3D render, CGI, anything held in her hands, close-ups of her hands or fingers, splayed or spread fingers on the man's hand, macro finger detail, costume-drama styling, Celtic novelty jewellery, green novelty Irish clothing, modern objects, roads, vehicles, poles, wires, signage.
 ```
 
 **Three things stay out of Director and get done in the edit:**
@@ -490,4 +513,31 @@ whole argument inverts — the dream would be arriving *after* the real world ke
 ## Phase 1 — done
 
 `women.png`, `women-face.png` and the drawn style are locked, and all seven plates are in `assets/`.
-The blocks above are kept only for regenerating a reject. Live work continues in the Director brief.
+The blocks above are kept only for regenerating a reject.
+
+---
+
+## Where the film stands — OpenArt closed
+
+**The full track is rendered and delivered.** All nine sections, both bridges, the live opening of
+bridge 1 and the hard cut into the painted dream. Download it and keep it as
+`director-full-minimax-768.mp4` before anything expires.
+
+**OpenArt never landed the eye close-ups** — three attempts, wrong every time: dense stamped freckles,
+an open mouth that read as singing, a flat black pupil with no catchlight, and a single-eye iris macro
+instead of the locked framing. That is not a loss. Sections 1, 6 and 9 were **always** planned to be
+rendered outside Director; see **THE EYES** above, where the three passes and their real durations
+already sit ready to paste.
+
+**Why they will work elsewhere and did not work here.** Director rebuilds her face from a Character
+asset every time, so it drifts. Any **image-to-video** tool that takes a **first frame** cannot drift
+her, because frame one *is* `women-face.png` — the approved pixels, the approved freckles, the
+approved catchlight. Use a first-frame tool and the whole class of failure disappears.
+
+**What is left to finish the film, in order:**
+1. Download the delivered render.
+2. Render eye passes A, B and C from `women-face.png` in a first-frame image-to-video tool, several
+   takes each, and cut them on the blinks to fill 33 s, 13 s and 30 s.
+3. Drop those three over Director's placeholder eyes.
+4. The seed under the door in section 3, composited from `drawn-lane.png`.
+5. The gold-leaf stars painted into her irises on the outro's last line — the only dual-medium frame.

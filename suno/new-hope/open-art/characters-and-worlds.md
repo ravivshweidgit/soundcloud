@@ -55,7 +55,7 @@ A narrow glen in the west of Ireland. A single-storey stone cottage stands at th
 The only person in the film. She appears in live action only and is never drawn.
 
 ```
-A woman in her late twenties to early thirties, of medium height and soft build. Gentle open face, soft features, warm freckled skin with a light natural flush on the cheeks — kind and calm, not weathered or harsh. No makeup. Clear soft green or grey-green eyes. Natural red hair — copper to auburn — worn loose or softly pulled back with loose strands at the temples, not severe. Her expression is gentle, patient and closed-mouthed — tender rather than sad, and never performing.
+A woman in her late twenties to early thirties, of medium height and soft build. Gentle open face, soft features, fair warm skin with a light natural flush on the cheeks — kind and calm, not weathered or harsh. A few sparse light freckles across the bridge of the nose only — never a dense constellation, never covering the forehead or cheeks. No makeup. Clear soft green or grey-green eyes. Natural red hair — copper to auburn — worn loose or softly pulled back with loose strands at the temples, not severe. Her expression is gentle, patient and closed-mouthed — tender rather than sad, and never performing.
 
 She wears a heavy hand-knitted wool jumper in undyed oatmeal cream, thick cable texture, loose and worn soft, the sleeves pushed back at the forearm. A long plain skirt of heavy charcoal wool to mid-calf, hanging straight. Thick dark socks. Scuffed brown leather ankle boots, laced, muddy at the welt. Nothing else: no coat, no shawl, no scarf, no hat, no bag, no jewellery, no watch. No patterns, no prints, no logos. Everything plain, worn and lived in.
 
@@ -63,7 +63,9 @@ Her hands are always empty.
 
 Rendered as filmic live-action photography: naturalistic skin and cloth, soft light falloff, matte finish, muted palette, organic 35mm film grain.
 
-Never: a second person beside her, glamour lighting, heavy makeup, styled runway hair, a shawl over the head, costume-drama styling, claddagh or Celtic jewellery, green novelty Irish clothing, grey streaks or harsh weathered outdoor face, anything held in her hands, any illustrated or animated depiction of her.
+Her mouth stays CLOSED in every shot of the film. No open mouth, no parted lips, no gasp, no gape — an open mouth in a music video reads as singing, and she never sings.
+
+Never: a second person beside her, glamour lighting, heavy makeup, styled runway hair, a shawl over the head, costume-drama styling, claddagh or Celtic jewellery, green novelty Irish clothing, grey streaks or harsh weathered outdoor face, dense freckle constellations covering forehead or cheeks, an open or parted mouth, a gasp or theatrical surprise, anything held in her hands, any illustrated or animated depiction of her.
 ```
 
 **Her one non-negotiable close-up.** Verse 1 is her eyes and nothing else, so the face has to

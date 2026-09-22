@@ -119,7 +119,9 @@ Grey take kept as `cherry-bloom-grey.png` — useful only if 27 needs to match 2
 | # | Lyric | Dur | Picture | Start / refs |
 |---|---|---|---|---|
 | 29 | going down the river flow | 5–8 s | Open wide: `@glen-midnight` — blossom under full moon. Then descend to the river, blossom over black banks. | `glen-midnight.png` → `river-midnight.png` |
-| 30 | Collecting pebbles and the stones | 5 s | **She steps barefoot into the shallow water onto the pebbles.** Low, close on feet and water, wide enough to read as her. No hands in frame. | `river-midnight.png` + `women.png` |
+| 30a | Collecting pebbles and the stones | 4 s | **She steps barefoot into the shallow water onto the pebbles.** Low, close on feet and water, wide enough to read as her. Her hands out of frame. | `river-midnight.png` + `women.png` |
+| 30b | *(same line)* | 3 s | **One pebble.** Her bare foot presses a single distinct pale stone into the wet grit, then leaves. Hold on that stone alone in her footprint. It must be recognisable again. | `river-midnight.png` |
+| 30c | *(same line)* | 3 s | **An unknown man's hand** enters low, closes on that same pebble, lifts it out of frame. Hand and wrist only — no face, body, silhouette or reflection. Dark, fingers closing not splayed, not macro. His only appearance in the film. | `river-midnight.png` |
 | 31 | Your footprints… midnight walk | 5–8 s | **Boot prints** already pressed in the mud — she is barefoot, so they are unmistakably **not hers**. She finds them. | `river-midnight.png` (add prints in prompt or edit) |
 
 ## Outro · Live + Drawn stars in eyes
