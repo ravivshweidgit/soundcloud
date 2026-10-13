@@ -1,0 +1,11 @@
+[# Sources <FIRST_FRAME>@Image1] [# References <IMAGE_REF_0>@Image2]
+
+Animate this exact first frame. A single continuous 3-second shot, one take: no cuts, no close-ups, no change of angle, same framing and composition as the first frame from start to end. The camera holds almost still, with only a very slow gentle push-in.
+
+The woman stays standing on the side step of the zebra-striped safari jeep, holding the roof rail with one hand. She lifts the binoculars to her eyes and looks through them toward the animals on the right, then lowers them slightly and smiles with excitement. A warm breeze blows: the long ends of her olive scarf flutter and wave strongly in the wind, loose strands of her hair move, the hem of her short khaki skirt moves lightly. Her face stays the same as the reference.
+
+The zebras graze and swish their tails, one lifts its head and flicks its ears. The giraffe slowly turns its long neck and chews. The far elephants by the lake stay exactly where they are in the first frame, far away at the water's edge and in the shade of the acacia tree, and only move a little in place: they gently flap their ears, slowly swing their trunks and shift their weight. They are alive, not frozen, but no elephant walks anywhere, no elephant comes closer, and no elephant appears in front of or behind the giraffe. No new animals appear. The tall dry golden grass sways in the wind.
+
+The striped hot air balloon drifts slowly and steadily from left to right across the sky, its basket hanging below, moving a clear but gentle distance during the 3 seconds. Soft clouds drift slightly. The lake shimmers.
+
+Warm late-afternoon sunlight, the light stays the same throughout. Photorealistic, joyful, real safari feeling. No text.

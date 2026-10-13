@@ -74,3 +74,17 @@ mp4/**/*-concat.txt
 # Tooling binaries
 tools/ffmpeg7/
 
+# Downloaded model files
+*.task
+
+# Windows Media Player album art
+Folder.jpg
+AlbumArtSmall.jpg
+
+# Safari raw photos, lodge reference photos and discarded takes stay local — several GB
+suno/safari/open-art/ALEX/
+suno/safari/open-art/phone/
+suno/safari/open-art/Raviv/
+suno/safari/open-art/assets/lodge/
+suno/**/notInUse/
+

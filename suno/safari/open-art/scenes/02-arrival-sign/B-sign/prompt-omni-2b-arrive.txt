@@ -1,0 +1,13 @@
+[# Sources <FIRST_FRAME>@Image1] [# References <IMAGE_REF_0>@Image2]
+
+A 3-second realistic clip in one continuous shot. The camera rides behind the front seats of the open zebra-striped safari jeep. The jeep slowly rolls forward and gently comes to a stop in front of the lodge entrance; the "DULUTI ~ LAKE ~ VIEW ~ LODGE" sign on the painted fence ahead grows larger and stays sharp, readable and unchanged. Same place, same fence, same sign throughout — no cut, no new location.
+
+Both of them keep looking straight ahead at the sign the whole time; they never turn toward each other or toward the camera.
+- The woman on the left (the woman <IMAGE_REF_0>, white sunglasses) leans forward slightly in excitement and raises her hand toward the sign, her wavy shoulder-length hair moving lightly.
+- The man on the right eases the jeep to a stop with both hands on the steering wheel on the right side, and gives a small nod toward the sign.
+
+Bright natural daylight, leaves swaying softly. Smooth cinematic motion.
+
+Ambient sound: engine slowing to idle, tyres crunching to a stop on gravel, birds.
+
+Use Image1 as the starting frame. Use Image2 only as an identity reference for the woman; it should not be used as a literal frame.

@@ -1,0 +1,9 @@
+[# Sources <FIRST_FRAME>@Image1] [# References <IMAGE_REF_0>@Image2]
+
+A 3-second realistic clip. Slow, smooth cinematic camera push-in toward the woman and the airplane window. She is the woman <IMAGE_REF_0>, white sunglasses on, sitting relaxed in the business-class window seat with her legs crossed. She slowly turns her head a little more toward the window and smiles softly as she gazes at the snow-capped Kilimanjaro above the clouds. Outside, white clouds drift slowly. Her face, its slim jawline and chin, her nose, lips and smile stay identical to Image2 for the whole clip. The bag, her outfit and the cabin stay unchanged.
+
+Soft morning light through the window. Steady, elegant motion, no cuts.
+
+Ambient sound: soft airplane cabin hum.
+
+Use Image1 as the starting frame. Use Image2 only as an identity reference for the woman's face; it should not be used as a literal frame.

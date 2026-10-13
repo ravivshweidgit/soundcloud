@@ -1,0 +1,13 @@
+[# Sources <FIRST_FRAME>@Image1] [# References <IMAGE_REF_0>@Image2]
+
+A 3-second realistic clip. The camera is mounted behind the back seat of the open zebra-striped safari jeep and travels with it. The jeep drives steadily forward along the sandy tree-lined road toward the shimmering lake and the mountain at sunset: the trees slide past on both sides and the lake grows closer. A bright path of golden sun glitter flickers on the water.
+
+The woman on the left is the woman <IMAGE_REF_0>, white sunglasses on. In the first second she shares a smile with the man driving, then she relaxes her shoulders and naturally turns her head forward to look ahead at the lake through the windscreen, settling comfortably in her seat, her neck and shoulders loose and natural. By the end we see her from behind in soft three-quarter view, gazing at the lake, her shoulder-length hair fluttering in the wind. Her face, age, nose, lips and smile stay identical to the woman in Image2 whenever it is visible.
+
+The man in the flat cap drives with both hands on the steering wheel on the right side.
+
+Warm golden-hour backlight, light dust, leaves swaying. Smooth, steady cinematic motion, no cuts.
+
+Ambient sound: engine hum, tyres on gravel, wind, birds.
+
+Use Image1 as the starting frame. Use Image2 only as an identity reference for the woman's face; it should not be used as a literal frame.

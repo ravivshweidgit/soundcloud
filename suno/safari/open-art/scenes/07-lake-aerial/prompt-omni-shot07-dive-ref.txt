@@ -1,0 +1,16 @@
+[# Sources <FIRST_FRAME>@Image1] [# References <IMAGE_REF_0>@Image2]
+
+A 3-second realistic drone clip in one continuous shot. It starts exactly as Image1 and ends exactly as Image2. The drone hovers almost still; the camera does not turn or pan. Same lake, same shore, same light — no cut.
+
+- In Image1 the ONE monitor lizard lies on the grassy bank under the trees at the far right of the lake. Right away it slides head first off the bank into the water, its whole body and tail following it under, with one small splash. It is completely gone, exactly like Image2: no lizard anywhere on the bank or in the water, only the small ripple rings at the shore under the trees. It never comes back up.
+- That is the ONLY splash. The rest of the lake stays calm and glassy: no fish, no other splashes.
+- The woman simply continues the stride she is already in: she walks naturally forward along the sunlit shore path, down and to the left, at a relaxed steady pace, from her spot in Image1 to her spot in Image2. She keeps walking in that one direction the whole time — she never turns around and never steps back. As she walks she glances toward the distant splash, her olive scarf and red-blonde hair moving in the breeze, her long shadow following her.
+- The two small vervet monkeys stay on the path near her, one looking up at her hands hoping for food.
+- The grey heron flies from its place in Image1 to its place in Image2, right to left with slow wingbeats, high above the water, its reflection following.
+- The man in the dugout canoe paddles slowly.
+
+Only these animals: one lizard, two vervet monkeys, one heron. Real small sizes. Late golden afternoon light. Photorealistic.
+
+Ambient sound: birdsong, soft breeze, one small distant water splash.
+
+Use Image1 as the starting frame and Image2 as the final state of the scene.

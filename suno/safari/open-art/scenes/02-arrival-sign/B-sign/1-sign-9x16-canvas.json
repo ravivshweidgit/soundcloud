@@ -1,0 +1,15 @@
+{
+ "source": "P1000044.JPG + Gemini clean ground",
+ "crop_box": [
+  1317,
+  855,
+  4740,
+  3110
+ ],
+ "width": 2160,
+ "height": 3840,
+ "sign_x": 0,
+ "sign_y": 1208,
+ "sign_w": 2160,
+ "sign_h": 1423
+}

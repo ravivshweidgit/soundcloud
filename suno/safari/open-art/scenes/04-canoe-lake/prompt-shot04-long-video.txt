@@ -1,0 +1,9 @@
+[# Sources <FIRST_FRAME>@Image1] [# References <IMAGE_REF_0>@Image2]
+
+Animate this exact first frame. A single continuous 3-second shot, one take: no cuts, no close-ups, no change of angle, same framing and composition as the first frame from start to end. The camera holds almost still, with only a very slow gentle drift.
+
+The long wooden dugout canoe stays diagonal across the frame exactly as in the first frame and glides slowly forward toward the upper left, keeping its full length and shape. The man at the stern in the lower right paddles with slow relaxed strokes: the wooden blade dips into the water, pulls, lifts out dripping and swings forward again. The woman sitting in the middle of the canoe stays in place, smiling, looking out over the lake; her scarf moves gently in the breeze.
+
+The grey heron on the right flies from RIGHT to LEFT low over the water at a real heron's natural cruising speed with realistic flight physics: steady, deep, powerful wingbeats about two per second (around six full wingbeats in the 3 seconds), body level and moving forward constantly, no hovering, no slow motion, no gliding in place. Fast and direct: at 1 second it is already above the middle of the lake, at 2 seconds it passes above the canoe's bow on the left, and at 3 seconds it reaches the left edge of the frame. Its reflection races beneath it on the water. The cormorant stays on its stump. Soft ripples and a gentle wake trail behind the canoe; Mount Meru and the jacaranda shore stay still.
+
+Strong bright late-afternoon sunshine from the left, vivid greens, deep blue sky, glowing reflections; the light stays the same throughout. Photorealistic, peaceful. No text.

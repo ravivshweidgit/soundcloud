@@ -182,7 +182,11 @@ All-synth version: the chords pulse as short stabs on the beat instead of runnin
 arpeggios. Closer to the Midnights sound.
 
 ```
-Modern synth-pop cover, sung in English, steady 100 BPM, 4/4, keep the original melody, phrasing and vocal speed. Intimate breathy female lead vocal, conversational storytelling verses, bright catchy soaring chorus, clear American English diction, layered doubled vocals and airy harmonies on the hooks. Punchy programmed 80s drums, gated snare, tight claps, pulsing synth bass, shimmering analog synth pads holding long sustained chords as harmony only, punchy 8th-note synth chord stabs, bright synth lead hook, finger snaps in the verses, wide dreamy reverb on the choruses. Polished glossy radio mix, crisp and clean. Nostalgic, romantic, bittersweet, confident. Avoid: country, acoustic folk, EDM drop, trap, rap, rock guitars, heavy distortion, arpeggios, rhythmic delay echoes on synths, gated or pulsing pads.
+Modern synth-pop cover, sung in English, steady 100 BPM, 4/4, keep the original melody, phrasing and vocal speed. 
+
+Intimate breathy female lead vocal, conversational storytelling verses, bright catchy soaring chorus, clear American English diction, layered doubled vocals and airy harmonies on the hooks
+
+. Punchy programmed 80s drums, gated snare, tight claps, pulsing synth bass, shimmering analog synth pads holding long sustained chords as harmony only, punchy 8th-note synth chord stabs, bright synth lead hook, finger snaps in the verses, wide dreamy reverb on the choruses. Polished glossy radio mix, crisp and clean. Nostalgic, romantic, bittersweet, confident. Avoid: country, acoustic folk, EDM drop, trap, rap, rock guitars, heavy distortion, arpeggios, rhythmic delay echoes on synths, gated or pulsing pads.
 ```
 
 817 characters.
