@@ -9,6 +9,7 @@
 - The soulmate from the English song: the one who is missing, who didn't come home or is still held. The waiting on the bridge is the families' waiting.
 - Walls of clay (`חומות חימר`): the cultural gaps, a symbol of the rifts in Israeli society. `התנפצו`: how did they shatter — the walls between us broke that morning, together with the barrier and the sense of security.
 - Hourglass (`שעון החול`): the measured time of a life, as Natan Yonatan wrote in his song "שירים עד כאן". It is also the official name of the Gaza border barrier project, broken through within minutes on October 7.
+- Where will I find you (`אמצא אותך`): verse 1 masculine `אוֹתְךָ`, to him; verse 2 feminine `אוֹתָךְ`, self-address of someone lost in bereavement, and nationally the men and women who are no longer with us.
 - Verses: sung by the one who waits (female), to the one who didn't come home (male). Verse 1 is that morning; verse 2 is the winters after, when the fields turn red again.
 
 ## Suno lyrics
@@ -31,7 +32,7 @@ Paste everything inside the block into the Suno Lyrics box. Nothing else.
 הו, איפה הבוקר שעלה
 הו, איפה השמש נאלמה
 
-הו, איפה אמצא אותך עכשיו
+הו, איפה אמצא אוֹתְךָ עכשיו
 הו, לקט פֵּאָה ושיכחה
 הו, רק תן לי טיפות טיפות של אור
 
@@ -55,10 +56,10 @@ Paste everything inside the block into the Suno Lyrics box. Nothing else.
 הו, לקט פֵּאָה ושיכחה
 הו, איפה הבית שחרב
 הו, שוב בשדה עומד חָצָב
-הו, אמור לָמָּה לא חזרת עוד
+הו, אֱמוֹר לָמָּה לא חזרת עוד
 הו, עוד חורף בא ואתה לא
 
-הו, איפה אמצא אותך עכשיו
+הו, איפה אמצא אוֹתָךְ עכשיו
 הו, מים רַבִּים לא יְכַבּוּ
 הו, רק תן לי טיפות טיפות של אור
 הו, איך התנפצו חומות חֵמָר
