@@ -3,13 +3,15 @@
 ## Meaning: October 7
 
 - End of summer (`ובסוף הקיץ`): October 7, Simchat Torah, the last days of summer before the first rains.
-- Winter fields and anemone blood (`על שדות החורף דם כלניות נשפך`): Darom Adom, the red anemones that cover the Gaza envelope fields every winter. Anemones already stand for the fallen.
-- Among the poppies (`בין פרגים נפרח`): `פרח` as in `פרחה נשמתו` — gone, dead. Future tense on purpose: "we will be gone", sung by one of them, as if foreseen. It also keeps the bloom meaning, youth dancing in the fields at Nova, so the line reads as both. The poppy is also the international flower of remembrance.
-- Dry streams (`נחלי אכזב`): the hope that broke. A wadi like the Besor near Re'im runs only after rain and is dry at summer's end.
-- The soulmate from the English song: the one who is missing, who didn't come home or is still held. The waiting on the bridge is the families' waiting.
+- Winter fields and anemone blood (`על שדות החורף דם כלניות נשפך`): Darom Adom, the red anemones that cover the Gaza envelope fields every winter. The anemones are the lives that were murdered.
+- Among the poppies (`בין פרגים נפרח`): `פרח` as in `פרחה נשמתו` — gone, dead. Future tense on purpose: "we will be gone", sung by one of them, as if foreseen. It also keeps the bloom meaning, youth dancing in the fields at Nova, so the line reads as both. The poppies are the dead; the poppy is also the international flower of remembrance.
+- Dry streams (`נחלי אכזב`): bereavement. A wadi like the Besor near Re'im runs only after rain and is dry at summer's end.
 - Walls of clay (`חומות חימר`): the cultural gaps, a symbol of the rifts in Israeli society. `התנפצו`: how did they shatter — the walls between us broke that morning, together with the barrier and the sense of security.
-- Hourglass (`שעון החול`): the measured time of a life, as Natan Yonatan wrote in his song "שירים עד כאן". It is also the official name of the Gaza border barrier project, broken through within minutes on October 7.
-- Where will I find you (`אמצא אותך`): verse 1 masculine `אוֹתְךָ`, to him; verse 2 feminine `אוֹתָךְ`, self-address of someone lost in bereavement, and nationally the men and women who are no longer with us.
+- Hourglass (`שעון החול נפרץ`): an exact quote from the IDF field observers' radio on the morning of October 7, as heard in the recordings of Roni Eshel z"l at the Nahal Oz post — "Hourglass" was the code name of the fence sector being crossed. It is also the measured time of a life, as Natan Yonatan wrote in his song "שירים עד כאן". It is also the official name of the Gaza border barrier project, broken through within minutes on October 7.
+- How, why (`איך התנפצו` / `לָמָּה שעון החול נפרץ`): together, the two lines are the questions a commission of inquiry must answer, and a protest against the state and the establishment.
+- Verse 2 opening (`לקט פֵּאָה ושיכחה` / `איפה הבית שחרב`): the commandments of Judaism and the Temple, on a personal, national and political level at once — a commandment lost, and a protest. The Temple destroyed over baseless hatred (`שנאת חינם`), and the houses burned and destroyed on October 7.
+- No one came (`אין איש לא בא, אף לא אחד`): the army that did not come.
+- Where will I find you (`אמצא אותך`): the hostages, and the dead who were not brought back. Verse 1 masculine `אוֹתְךָ`, to him; verse 2 feminine `אוֹתָךְ`, self-address of someone lost in bereavement, and nationally the men and women who are no longer with us.
 - Verses: sung by the one who waits (female), to the one who didn't come home (male). Verse 1 is that morning; verse 2 is the winters after, when the fields turn red again.
 
 ## Suno lyrics
@@ -135,23 +137,27 @@ Paste everything inside the block into the Suno Lyrics box. Nothing else.
 Verse 1, that morning:
 - Oh, how the walls of clay shattered — the rifts in Israeli society
 - Oh, why was the Hourglass breached — the barrier broken through that morning; also the measured time of a life (Natan Yonatan, "שירים עד כאן"); also "Hourglass", the Gaza border barrier project: the underground and above-ground wall with its sensors, finished about two years before the war at about 3.5 billion shekels, broken through at many points within minutes on October 7 (`או`, not `הו`, on purpose: a harder cry, a voice breaking in pain)
-- Oh, where is the morning that rose
-- Oh, where the sun fell silent (`נאלמה`, sung the same as `נעלמה`, vanished — both meanings at once)
-- Oh, you sent me no one (no one came that day)
+- Oh, where is the morning that rose — a morning that was lost, the loss of life
+- Oh, where the sun fell silent (`נאלמה` with alef: struck silent by shock; sung the same as `נעלמה`, so also vanished, hidden, lost. The sun is life and light) — survivors of the Nova party said they could not see the sun for the smoke and the rockets
+- Oh, no one came, not a single one — the army that did not come
 - Oh, where will I find you now
-- Oh, waiting on the shore every day
-- Oh, just give me drops, drops of light
-- Oh, like waves of wheat
-- No, no / I want / I want nothing
-- And in my heart a prayer / that you come back to me / come home to me
+- Oh, gleanings, the field's corner and the forgotten sheaf — the commandment to leave food for the weak, said in protest: the weak were abandoned, against the commandment. It ties into the wheat fields of the song
+- Oh, just give me drops, drops of light — hope, expecting good
+
+Bridge:
+- Oh, like waves of wheat — wheat is growth and life
+- If only I could grow again — echoes "החיטה צומחת שוב", the song from the Yom Kippur War of 1973 and Beit HaShita; growth out of the break, hope
+- Those who sow in tears (Psalm 126) — we carry the break in our hearts, always
+- A sickle in the standing grain — death reaping lives
+- The plots filled with grain — from the song "מלאו אסמינו בר" (lyrics Pinchas Lander, sung by HaGivatron). The plots are the wheat plots in the fields, and also the plots in the cemeteries that filled up. `בר` is both the grain of the fields and the wild flowers (`פרחי בר`) — poppies, anemones — that stand for people, who are passing
 
 Verse 2, the winters after:
-- Oh, where is your laughter now
+- Oh, gleanings, the field's corner and the forgotten sheaf
 - Oh, where is the home that was destroyed
-- Oh, again a squill stands in the field (`חצב` blooms at the very end of summer, the sign summer is over)
-- Why, why haven't you come back yet
-- Oh, another winter comes, and you don't
-- Oh, many waters will not quench (Song of Songs 8:7, `מים רבים לא יוכלו לכבות את האהבה` — the listener completes it: love)
+- Oh, again a squill stands in the field — the squill stands alone, a memorial to the personal loss: the beloved the song speaks to, who did not come back (`חצב` blooms at the very end of summer)
+- Oh, tell me why you haven't come back yet — a sentence of despair: the dead will not return, and she asks anyway
+- Oh, another winter comes, and you don't — the despair goes on; she says it to herself: another winter without you. The bereavement carried in the heart, always
+- Oh, many waters will not quench (Song of Songs 8:7, `מים רבים לא יוכלו לכבות את האהבה` — the listener completes it: love) — the feeling stays alive. The waters are the time that passes, and it does not loosen the hold
 
 ## Fit to the original melody
 
